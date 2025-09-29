@@ -108,6 +108,18 @@ models = [
     capacity = "100"
   },
   {
+    name     = "grok-4-fast-non-reasoning"
+    model    = "grok-4-fast-non-reasoning"
+    format   = "xAI"
+    capacity = "100"
+  },
+  {
+    name     = "grok-4-fast-reasoning"
+    model    = "grok-4-fast-reasoning"
+    format   = "xAI"
+    capacity = "100"
+  },
+  {
     name     = "Llama-3.3-70B-Instruct"
     model    = "Llama-3.3-70B-Instruct"
     format   = "Meta"
@@ -123,6 +135,12 @@ models = [
   {
     name     = "mistral-medium-2505"
     model    = "mistral-medium-2505"
+    format   = "Mistral AI"
+    capacity = "1"
+  },
+  {
+    name     = "mistral-document-ai-2505"
+    model    = "mistral-document-ai-2505"
     format   = "Mistral AI"
     capacity = "1"
   },
@@ -166,5 +184,11 @@ models = [
     version  = "2025-05-02"
     capacity = "25"
     sku_name = "Standard"
+  },
+  {
+    name     = "cohere-command-a"
+    model    = "cohere-command-a"
+    format   = "Cohere"
+    capacity = "1"
   }
 ]

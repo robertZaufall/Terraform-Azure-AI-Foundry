@@ -4,3 +4,4 @@ config.azurerm.tfbackend
 .terraform.*
 .terraform/
 CLAUDE.md
+package-lock.json
