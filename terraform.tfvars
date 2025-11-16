@@ -66,12 +66,6 @@ models = [
     capacity = "20"
   },
   {
-    name     = "o1-mini"
-    model    = "o1-mini"
-    version  = "2024-09-12"
-    capacity = "200"
-  },
-  {
     name     = "o3-pro"
     model    = "o3-pro"
     version  = "2025-06-10"
@@ -190,5 +184,23 @@ models = [
     model    = "cohere-command-a"
     format   = "Cohere"
     capacity = "1"
+  },
+  {
+    name     = "gpt-5.1"
+    model    = "gpt-5.1"
+    version  = "2025-11-13"
+    capacity = "150"
+  },
+  {
+    name     = "gpt-5.1-codex-mini"
+    model    = "gpt-5.1-codex-mini"
+    version  = "2025-11-13"
+    capacity = "150"
+  },
+  {
+    name     = "gpt-5.1-codex"
+    model    = "gpt-5.1-codex"
+    version  = "2025-11-13"
+    capacity = "150"
   }
 ]
