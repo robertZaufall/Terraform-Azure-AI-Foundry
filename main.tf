@@ -15,7 +15,7 @@ locals {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = "x4u-test-ai"
+  name     = "x4u-ai"
   location = local.default_region
 }
 

@@ -11,7 +11,7 @@ variable "release_number" {
 
 variable "cga_name" {
   type        = string
-  default     = "x4utestai"
+  default     = "x4uai"
   description = "Cognitive account name or prefix"
 }
 variable "default_region" {

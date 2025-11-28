@@ -1,7 +1,7 @@
 build_number   = "1.0"
 release_number = "1"
 
-cga_name       = "x4utestai"
+cga_name       = "x4uai"
 default_region = "East US 2"
 
 models = [
@@ -9,91 +9,81 @@ models = [
     name     = "gpt-oss-120b"
     model    = "gpt-oss-120b"
     format   = "OpenAI-OSS"
-    capacity = "250"
+    capacity = "100"
+  },
+  # quota error (???)
+  # {
+  #   name     = "model-router"
+  #   model    = "model-router"
+  #   version  = "2025-11-18"
+  #   capacity = "10"
+  # },
+  {
+    name     = "gpt-5.1"
+    model    = "gpt-5.1"
+    version  = "2025-11-13"
+    capacity = "100"
   },
   {
-    name     = "model-router"
-    model    = "model-router"
-    version  = "2025-08-07"
-    capacity = "500"
+    name     = "gpt-5.1-codex-mini"
+    model    = "gpt-5.1-codex-mini"
+    version  = "2025-11-13"
+    capacity = "100"
+  },
+  {
+    name     = "gpt-5.1-codex"
+    model    = "gpt-5.1-codex"
+    version  = "2025-11-13"
+    capacity = "100"
   },
   {
     name     = "gpt-5"
     model    = "gpt-5"
     version  = "2025-08-07"
-    capacity = "150"
+    capacity = "100"
   },
-  {
-    name     = "gpt-5-pro"
-    model    = "gpt-5-pro"
-    version  = "2025-10-06"
-    capacity = "150"
-  },
+  # too expensive ($15/$120)
+  # {
+  #   name     = "gpt-5-pro"
+  #   model    = "gpt-5-pro"
+  #   version  = "2025-10-06"
+  #   capacity = "10"
+  # },
   {
     name     = "gpt-5-mini"
     model    = "gpt-5-mini"
     version  = "2025-08-07"
-    capacity = "200"
+    capacity = "100"
   },
   {
     name     = "gpt-5-nano"
     model    = "gpt-5-nano"
     version  = "2025-08-07"
-    capacity = "200"
-  },
-  {
-    name     = "gpt-4o"
-    model    = "gpt-4o"
-    version  = "2024-11-20"
-    capacity = "25"
-  },
-  {
-    name     = "gpt-4.1"
-    model    = "gpt-4.1"
-    version  = "2025-04-14"
-    capacity = "150"
-  },
-  {
-    name     = "gpt-4.1-mini"
-    model    = "gpt-4.1-mini"
-    version  = "2025-04-14"
-    capacity = "200"
-  },
-  {
-    name     = "gpt-4.1-nano"
-    model    = "gpt-4.1-nano"
-    version  = "2025-04-14"
-    capacity = "200"
-  },
-  {
-    name     = "o1"
-    model    = "o1"
-    version  = "2024-12-17"
-    capacity = "20"
+    capacity = "100"
   },
   {
     name     = "o3-pro"
     model    = "o3-pro"
     version  = "2025-06-10"
-    capacity = "20"
+    capacity = "10"
   },
   {
     name     = "o3"
     model    = "o3"
     version  = "2025-04-16"
-    capacity = "20"
+    capacity = "50"
   },
   {
     name     = "o3-mini"
     model    = "o3-mini"
     version  = "2025-01-31"
-    capacity = "200"
+    capacity = "100"
   },
   {
     name     = "o4-mini"
     model    = "o4-mini"
     version  = "2025-04-16"
-    capacity = "200"
+    capacity = "100"
   },
   {
     name     = "grok-3"
@@ -107,6 +97,13 @@ models = [
     format   = "xAI"
     capacity = "100"
   },
+  # deploys forever
+  # {
+  #   name     = "grok-4"
+  #   model    = "grok-4"
+  #   format   = "xAI"
+  #   capacity = "100"
+  # },
   {
     name     = "grok-4-fast-non-reasoning"
     model    = "grok-4-fast-non-reasoning"
@@ -148,7 +145,7 @@ models = [
     name     = "whisper"
     model    = "whisper"
     version  = "001"
-    capacity = "2"
+    capacity = "1"
     sku_name = "Standard"
   },
   {
@@ -167,7 +164,7 @@ models = [
     name     = "dall-e-3"
     model    = "dall-e-3"
     version  = "3.0"
-    capacity = "2"
+    capacity = "1"
     sku_name = "Standard"
     region   = "East US"
   },
@@ -175,14 +172,14 @@ models = [
     name     = "gpt-image-1"
     model    = "gpt-image-1"
     version  = "2025-04-15"
-    capacity = "2"
+    capacity = "1"
     region   = "West US 3"
   },
   {
     name     = "sora"
     model    = "sora"
     version  = "2025-05-02"
-    capacity = "25"
+    capacity = "10"
     sku_name = "Standard"
   },
   {
@@ -190,23 +187,28 @@ models = [
     model    = "cohere-command-a"
     format   = "Cohere"
     capacity = "1"
-  },
-  {
-    name     = "gpt-5.1"
-    model    = "gpt-5.1"
-    version  = "2025-11-13"
-    capacity = "150"
-  },
-  {
-    name     = "gpt-5.1-codex-mini"
-    model    = "gpt-5.1-codex-mini"
-    version  = "2025-11-13"
-    capacity = "150"
-  },
-  {
-    name     = "gpt-5.1-codex"
-    model    = "gpt-5.1-codex"
-    version  = "2025-11-13"
-    capacity = "150"
   }
+  # failed to deploy (internal server error)
+  #,
+  # {
+  #   name     = "claude-opus-4-5"
+  #   model    = "claude-opus-4-5"
+  #   version  = "20251101"
+  #   format   = "Anthropic"
+  #   capacity = "150"
+  # },
+  # {
+  #   name     = "claude-sonnet-4-5"
+  #   model    = "claude-sonnet-4-5"
+  #   version  = "20250929"
+  #   format   = "Anthropic"
+  #   capacity = "150"
+  # },
+  # {
+  #   name     = "claude-haiku-4-5"
+  #   model    = "claude-haiku-4-5"
+  #   version  = "20251001"
+  #   format   = "Anthropic"
+  #   capacity = "150"
+  # }
 ]
