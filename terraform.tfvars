@@ -24,6 +24,12 @@ models = [
     capacity = "150"
   },
   {
+    name     = "gpt-5-pro"
+    model    = "gpt-5-pro"
+    version  = "2025-10-06"
+    capacity = "150"
+  },
+  {
     name     = "gpt-5-mini"
     model    = "gpt-5-mini"
     version  = "2025-08-07"
