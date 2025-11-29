@@ -187,28 +187,26 @@ models = [
     model    = "cohere-command-a"
     format   = "Cohere"
     capacity = "1"
+  },
+  {
+    name     = "claude-opus-4-5"
+    model    = "claude-opus-4-5"
+    version  = "20251101"
+    format   = "Anthropic"
+    capacity = "150"
+  },
+  {
+    name     = "claude-sonnet-4-5"
+    model    = "claude-sonnet-4-5"
+    version  = "20250929"
+    format   = "Anthropic"
+    capacity = "150"
+  },
+  {
+    name     = "claude-haiku-4-5"
+    model    = "claude-haiku-4-5"
+    version  = "20251001"
+    format   = "Anthropic"
+    capacity = "150"
   }
-  # failed to deploy (internal server error)
-  #,
-  # {
-  #   name     = "claude-opus-4-5"
-  #   model    = "claude-opus-4-5"
-  #   version  = "20251101"
-  #   format   = "Anthropic"
-  #   capacity = "150"
-  # },
-  # {
-  #   name     = "claude-sonnet-4-5"
-  #   model    = "claude-sonnet-4-5"
-  #   version  = "20250929"
-  #   format   = "Anthropic"
-  #   capacity = "150"
-  # },
-  # {
-  #   name     = "claude-haiku-4-5"
-  #   model    = "claude-haiku-4-5"
-  #   version  = "20251001"
-  #   format   = "Anthropic"
-  #   capacity = "150"
-  # }
 ]
