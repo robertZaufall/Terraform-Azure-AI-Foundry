@@ -85,18 +85,18 @@ models = [
     version  = "2025-04-16"
     capacity = "100"
   },
-  {
-    name     = "grok-3"
-    model    = "grok-3"
-    format   = "xAI"
-    capacity = "100"
-  },
-  {
-    name     = "grok-3-mini"
-    model    = "grok-3-mini"
-    format   = "xAI"
-    capacity = "100"
-  },
+  # {
+  #   name     = "grok-3"
+  #   model    = "grok-3"
+  #   format   = "xAI"
+  #   capacity = "100"
+  # },
+  # {
+  #   name     = "grok-3-mini"
+  #   model    = "grok-3-mini"
+  #   format   = "xAI"
+  #   capacity = "100"
+  # },
   # deploys forever
   # {
   #   name     = "grok-4"
@@ -123,24 +123,24 @@ models = [
     version  = "5"
     capacity = "1"
   },
-  {
-    name     = "DeepSeek-R1-0528"
-    model    = "DeepSeek-R1-0528"
-    format   = "DeepSeek"
-    capacity = "1"
-  },
-  {
-    name     = "mistral-medium-2505"
-    model    = "mistral-medium-2505"
-    format   = "Mistral AI"
-    capacity = "1"
-  },
-  {
-    name     = "mistral-document-ai-2505"
-    model    = "mistral-document-ai-2505"
-    format   = "Mistral AI"
-    capacity = "1"
-  },
+  # {
+  #   name     = "DeepSeek-R1-0528"
+  #   model    = "DeepSeek-R1-0528"
+  #   format   = "DeepSeek"
+  #   capacity = "1"
+  # },
+  # {
+  #   name     = "mistral-medium-2505"
+  #   model    = "mistral-medium-2505"
+  #   format   = "Mistral AI"
+  #   capacity = "1"
+  # },
+  # {
+  #   name     = "mistral-document-ai-2505"
+  #   model    = "mistral-document-ai-2505"
+  #   format   = "Mistral AI"
+  #   capacity = "1"
+  # },
   {
     name     = "whisper"
     model    = "whisper"
@@ -182,12 +182,12 @@ models = [
     capacity = "10"
     sku_name = "Standard"
   },
-  {
-    name     = "cohere-command-a"
-    model    = "cohere-command-a"
-    format   = "Cohere"
-    capacity = "1"
-  },
+  # {
+  #   name     = "cohere-command-a"
+  #   model    = "cohere-command-a"
+  #   format   = "Cohere"
+  #   capacity = "1"
+  # },
   {
     name     = "claude-opus-4-5"
     model    = "claude-opus-4-5"
