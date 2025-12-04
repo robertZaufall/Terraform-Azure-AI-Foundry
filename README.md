@@ -2,6 +2,10 @@
 
 The goal is to deploy all desired models. Not all models are available in every region. The deployment process iterates over all set model definitions and their respective regions, creating a dedicated resource group for each region.  
 
+This project uses the newest (as of 2025-12-04) AzureRM provider `4.55.0`, which adds support for `azurerm_cognitive_account_project` resources.
+
+Anthropic models (Haiku, Sonnet, Opus) are not deployable end-to-end by default. Azure prompts for a usage-purpose question when deploying one of these models, which currently must be answered manually in the Azure AI Foundry UI. After completing that manual deployment (and deleting the temporary model), Terraform deployments for Anthropic models succeed.
+
 ![Foundry Deployments](foundry_deployments_1.png)  
 
 ![Foundry Deployments](foundry_deployments_2.png)

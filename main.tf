@@ -51,16 +51,40 @@ resource "azurerm_storage_account" "sa" {
   account_replication_type = "LRS"
 }
 
-resource "azurerm_ai_services" "aiservices" {
-  for_each              = toset(local.ai_regions)
-  name                  = each.value == local.default_region ? local.cga_name : "${local.cga_name}-${lower(replace(each.value, " ", ""))}"
-  location              = each.value
-  resource_group_name   = azurerm_resource_group.rg.name
-  sku_name              = "S0"
-  public_network_access = "Enabled"
-  custom_subdomain_name = each.value == local.default_region ? local.cga_name : "${local.cga_name}-${lower(replace(each.value, " ", ""))}"
+resource "azurerm_cognitive_account" "cga" {
+  for_each = toset(local.ai_regions)
+
+  name                = each.value == local.default_region ? local.cga_name : "${local.cga_name}-${lower(replace(each.value, " ", ""))}"
+  location            = each.value
+  resource_group_name = azurerm_resource_group.rg.name
+  kind                = "AIServices"
+  sku_name            = "S0"
+
+  custom_subdomain_name         = each.value == local.default_region ? local.cga_name : "${local.cga_name}-${lower(replace(each.value, " ", ""))}"
+  project_management_enabled    = true
+  public_network_access_enabled = true
+  tags                          = local.resource_tags
+
   network_acls {
     default_action = "Allow"
+  }
+
+  identity {
+    type = "SystemAssigned"
+  }
+}
+
+resource "azurerm_cognitive_account_project" "cap" {
+  for_each = toset(local.ai_regions)
+
+  name                 = each.value == local.default_region ? "${local.cga_name}-project" : "${local.cga_name}-${lower(replace(each.value, " ", ""))}-project"
+  display_name         = each.value == local.default_region ? "${local.cga_name}-project" : "${local.cga_name}-${lower(replace(each.value, " ", ""))}-project"
+  location             = each.value
+  cognitive_account_id = azurerm_cognitive_account.cga[each.value].id
+  tags                 = local.resource_tags
+
+  identity {
+    type = "SystemAssigned"
   }
 }
 
@@ -90,7 +114,8 @@ resource "azurerm_ai_foundry_project" "fp" {
 resource "azurerm_cognitive_deployment" "cgd" {
   for_each             = local.models_map
   name                 = each.value.model
-  cognitive_account_id = azurerm_ai_services.aiservices[each.value.region].id
+  cognitive_account_id = azurerm_cognitive_account.cga[each.value.region].id
+  depends_on           = [azurerm_cognitive_account_project.cap]
 
   model {
     format  = each.value.format
