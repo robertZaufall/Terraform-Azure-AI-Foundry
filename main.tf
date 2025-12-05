@@ -20,37 +20,7 @@ resource "azurerm_resource_group" "rg" {
 }
 
 
-resource "azurerm_key_vault" "kv" {
-  name                     = "${local.cga_name}-kv"
-  location                 = azurerm_resource_group.rg.location
-  resource_group_name      = azurerm_resource_group.rg.name
-  tenant_id                = local.azure_creds.tenantId
-  sku_name                 = "standard"
-  purge_protection_enabled = false
-}
-
-resource "azurerm_key_vault_access_policy" "kv-ap" {
-  key_vault_id = azurerm_key_vault.kv.id
-  tenant_id    = local.azure_creds.tenantId
-  object_id    = local.azure_creds.clientId
-
-  key_permissions = [
-    "Create",
-    "Get",
-    "Delete",
-    "Purge",
-    "GetRotationPolicy",
-  ]
-}
-
-resource "azurerm_storage_account" "sa" {
-  name                     = "${local.cga_name}sa"
-  location                 = azurerm_resource_group.rg.location
-  resource_group_name      = azurerm_resource_group.rg.name
-  account_tier             = "Standard"
-  account_replication_type = "LRS"
-}
-
+# foundry
 resource "azurerm_cognitive_account" "cga" {
   for_each = toset(local.ai_regions)
 
@@ -74,6 +44,7 @@ resource "azurerm_cognitive_account" "cga" {
   }
 }
 
+
 resource "azurerm_cognitive_account_project" "cap" {
   for_each = toset(local.ai_regions)
 
@@ -83,29 +54,6 @@ resource "azurerm_cognitive_account_project" "cap" {
   cognitive_account_id = azurerm_cognitive_account.cga[each.value].id
   tags                 = local.resource_tags
 
-  identity {
-    type = "SystemAssigned"
-  }
-}
-
-resource "azurerm_ai_foundry" "aihub" {
-  for_each            = toset(local.ai_regions)
-  name                = each.value == local.default_region ? "${local.cga_name}-hub" : "${local.cga_name}-${lower(replace(each.value, " ", ""))}-hub"
-  location            = each.value
-  resource_group_name = azurerm_resource_group.rg.name
-  storage_account_id  = azurerm_storage_account.sa.id
-  key_vault_id        = azurerm_key_vault.kv.id
-  identity {
-    type = "SystemAssigned"
-  }
-}
-
-resource "azurerm_ai_foundry_project" "fp" {
-  for_each           = toset(local.ai_regions)
-  name               = each.value == local.default_region ? "${local.cga_name}project" : "${local.cga_name}-${lower(replace(each.value, " ", ""))}project"
-  friendly_name      = each.value == local.default_region ? "${local.cga_name}-project" : "${local.cga_name}-${lower(replace(each.value, " ", ""))}-project"
-  location           = each.value
-  ai_services_hub_id = azurerm_ai_foundry.aihub[each.value].id
   identity {
     type = "SystemAssigned"
   }
