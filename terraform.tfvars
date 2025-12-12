@@ -19,6 +19,12 @@ models = [
   #   capacity = "10"
   # },
   {
+    name     = "gpt-5.2"
+    model    = "gpt-5.2"
+    version  = "2025-12-11"
+    capacity = "100"
+  },
+  {
     name     = "gpt-5.1"
     model    = "gpt-5.1"
     version  = "2025-11-13"
