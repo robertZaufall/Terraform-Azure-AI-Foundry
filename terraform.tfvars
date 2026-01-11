@@ -167,14 +167,6 @@ models = [
     capacity = "1"
   },
   {
-    name     = "dall-e-3"
-    model    = "dall-e-3"
-    version  = "3.0"
-    capacity = "1"
-    sku_name = "Standard"
-    region   = "East US"
-  },
-  {
     name     = "gpt-image-1"
     model    = "gpt-image-1"
     version  = "2025-04-15"
@@ -199,20 +191,20 @@ models = [
     model    = "claude-opus-4-5"
     version  = "20251101"
     format   = "Anthropic"
-    capacity = "150"
+    capacity = "250"
   },
   {
     name     = "claude-sonnet-4-5"
     model    = "claude-sonnet-4-5"
     version  = "20250929"
     format   = "Anthropic"
-    capacity = "150"
+    capacity = "250"
   },
   {
     name     = "claude-haiku-4-5"
     model    = "claude-haiku-4-5"
     version  = "20251001"
     format   = "Anthropic"
-    capacity = "150"
+    capacity = "250"
   }
 ]
