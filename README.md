@@ -102,4 +102,9 @@ az resource delete --ids ...
 ```
 
 ## Models
+Check model avilabilities and format names (!):
+```
+az cognitiveservices account list-models -g x4u-ai -n x4uai  --query "[?contains(name, 'opus')]"
+```
+
 [Model availability and regions](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions)
