@@ -18,9 +18,27 @@ models = [
     capacity = "10"
   },
   {
-    name     = "gpt-5.2-codex"
-    model    = "gpt-5.2-codex"
-    version  = "2026-01-14"
+    name     = "gpt-5.4"
+    model    = "gpt-5.4"
+    version  = "2026-03-05"
+    capacity = "100"
+  },
+  {
+    name     = "gpt-5.4-mini"
+    model    = "gpt-5.4-mini"
+    version  = "2026-03-17"
+    capacity = "100"
+  },
+  {
+    name     = "gpt-5.4-nano"
+    model    = "gpt-5.4-nano"
+    version  = "2026-03-17"
+    capacity = "100"
+  },
+  {
+    name     = "gpt-5.3-codex"
+    model    = "gpt-5.3-codex"
+    version  = "2026-02-24"
     capacity = "100"
   },
   {
@@ -48,21 +66,21 @@ models = [
     capacity = "100"
   },
   {
-    name     = "gpt-5-mini"
-    model    = "gpt-5-mini"
-    version  = "2025-08-07"
-    capacity = "100"
-  },
-  {
-    name     = "gpt-5-nano"
-    model    = "gpt-5-nano"
-    version  = "2025-08-07"
-    capacity = "100"
-  },
-  {
     name     = "o4-mini"
     model    = "o4-mini"
     version  = "2025-04-16"
+    capacity = "100"
+  },
+  {
+    name     = "grok-4-20-non-reasoning"
+    model    = "grok-4-20-non-reasoning"
+    format   = "xAI"
+    capacity = "100"
+  },
+  {
+    name     = "grok-4-20-reasoning"
+    model    = "grok-4-20-reasoning"
+    format   = "xAI"
     capacity = "100"
   },
   {
@@ -85,8 +103,9 @@ models = [
     capacity = "1"
   },
   {
-    name     = "Kimi-K2.5"
-    model    = "Kimi-K2.5"
+    name     = "Kimi-K2.6"
+    model    = "Kimi-K2.6"
+    version  = "2026-04-20"
     format   = "MoonshotAI"
     capacity = "100"
   },
@@ -128,18 +147,22 @@ models = [
     capacity = "1"
   },
   {
+    name     = "gpt-image-2"
+    model    = "gpt-image-2"
+    version  = "2026-04-21"
+    capacity = "1"
+  },
+  {
     name     = "gpt-image-1.5"
     model    = "gpt-image-1.5"
     version  = "2025-12-16"
     capacity = "1"
-    region   = "West US 3"
   },
   {
     name     = "gpt-image-1-mini"
     model    = "gpt-image-1-mini"
     version  = "2025-10-06"
     capacity = "1"
-    region   = "West US 3"
   },
   {
     name     = "sora-2"
