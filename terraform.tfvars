@@ -170,14 +170,6 @@ models = [
     version  = "2025-10-06"
     capacity = "10"
   },
-  # quota error (???)
-  # {
-  #   name     = "claude-opus-4-6"
-  #   model    = "claude-opus-4-6"
-  #   version  = "1"
-  #   format   = "Anthropic"
-  #   capacity = "1"
-  # },
   {
     name     = "claude-opus-4-5"
     model    = "claude-opus-4-5"
