@@ -12,12 +12,6 @@ models = [
     capacity = "100"
   },
   {
-    name     = "model-router"
-    model    = "model-router"
-    version  = "2025-11-18"
-    capacity = "10"
-  },
-  {
     name     = "gpt-5.6-sol"
     model    = "gpt-5.6-sol"
     version  = "2026-07-09"
@@ -123,13 +117,6 @@ models = [
     model    = "Mistral-Large-3"
     format   = "Mistral AI"
     capacity = "1"
-  },
-  {
-    name     = "whisper"
-    model    = "whisper"
-    version  = "001"
-    capacity = "1"
-    sku_name = "Standard"
   },
   {
     name     = "FLUX.2-flex"
