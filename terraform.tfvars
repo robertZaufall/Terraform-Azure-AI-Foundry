@@ -18,6 +18,24 @@ models = [
     capacity = "10"
   },
   {
+    name     = "gpt-5.6-sol"
+    model    = "gpt-5.6-sol"
+    version  = "2026-07-09"
+    capacity = "100"
+  },
+  {
+    name     = "gpt-5.6-terra"
+    model    = "gpt-5.6-terra"
+    version  = "2026-07-09"
+    capacity = "100"
+  },
+  {
+    name     = "gpt-5.6-luna"
+    model    = "gpt-5.6-luna"
+    version  = "2026-07-09"
+    capacity = "100"
+  },
+  {
     name     = "gpt-5.4"
     model    = "gpt-5.4"
     version  = "2026-03-05"
@@ -36,39 +54,15 @@ models = [
     capacity = "100"
   },
   {
-    name     = "gpt-5.3-codex"
-    model    = "gpt-5.3-codex"
-    version  = "2026-02-24"
-    capacity = "100"
-  },
-  {
-    name     = "gpt-5.2"
-    model    = "gpt-5.2"
-    version  = "2025-12-11"
-    capacity = "100"
-  },
-  {
-    name     = "gpt-5.1"
-    model    = "gpt-5.1"
-    version  = "2025-11-13"
-    capacity = "100"
-  },
-  {
-    name     = "gpt-5.1-codex-mini"
-    model    = "gpt-5.1-codex-mini"
-    version  = "2025-11-13"
-    capacity = "100"
-  },
-  {
-    name     = "gpt-5.1-codex"
-    model    = "gpt-5.1-codex"
-    version  = "2025-11-13"
-    capacity = "100"
-  },
-  {
     name     = "o4-mini"
     model    = "o4-mini"
     version  = "2025-04-16"
+    capacity = "100"
+  },
+  {
+    name     = "grok-4.3"
+    model    = "grok-4.3"
+    format   = "xAI"
     capacity = "100"
   },
   {
@@ -84,23 +78,18 @@ models = [
     capacity = "100"
   },
   {
-    name     = "grok-4-fast-non-reasoning"
-    model    = "grok-4-fast-non-reasoning"
-    format   = "xAI"
-    capacity = "100"
-  },
-  {
-    name     = "grok-4-fast-reasoning"
-    model    = "grok-4-fast-reasoning"
-    format   = "xAI"
-    capacity = "100"
-  },
-  {
     name     = "Llama-3.3-70B-Instruct"
     model    = "Llama-3.3-70B-Instruct"
     format   = "Meta"
     version  = "5"
     capacity = "1"
+  },
+  {
+    name     = "Kimi-K2.7-Code"
+    model    = "Kimi-K2.7-Code"
+    version  = "2026-06-12"
+    format   = "MoonshotAI"
+    capacity = "100"
   },
   {
     name     = "Kimi-K2.6"
@@ -110,9 +99,23 @@ models = [
     capacity = "100"
   },
   {
-    name     = "DeepSeek-V3.2"
-    model    = "DeepSeek-V3.2"
+    name     = "DeepSeek-V4-Pro"
+    model    = "DeepSeek-V4-Pro"
+    version  = "2026-04-23"
     format   = "DeepSeek"
+    capacity = "1"
+  },
+  {
+    name     = "DeepSeek-V4-Flash"
+    model    = "DeepSeek-V4-Flash"
+    version  = "2026-04-23"
+    format   = "DeepSeek"
+    capacity = "1"
+  },
+  {
+    name     = "mistral-medium-3-5"
+    model    = "mistral-medium-3-5"
+    format   = "Mistral AI"
     capacity = "1"
   },
   {
@@ -127,6 +130,12 @@ models = [
     version  = "001"
     capacity = "1"
     sku_name = "Standard"
+  },
+  {
+    name     = "FLUX.2-flex"
+    model    = "FLUX.2-flex"
+    format   = "Black Forest Labs"
+    capacity = "1"
   },
   {
     name     = "FLUX.2-pro"
@@ -165,10 +174,34 @@ models = [
     capacity = "1"
   },
   {
-    name     = "sora-2"
-    model    = "sora-2"
-    version  = "2025-10-06"
-    capacity = "10"
+    name     = "gpt-realtime-2.1"
+    model    = "gpt-realtime-2.1"
+    version  = "2026-07-07"
+    capacity = "1"
+  },
+  {
+    name     = "gpt-realtime-2.1-mini"
+    model    = "gpt-realtime-2.1-mini"
+    version  = "2026-07-07"
+    capacity = "1"
+  },
+  {
+    name     = "gpt-audio-1.5"
+    model    = "gpt-audio-1.5"
+    version  = "2026-02-23"
+    capacity = "1"
+  },
+  {
+    name     = "gpt-4o-mini-tts"
+    model    = "gpt-4o-mini-tts"
+    version  = "2025-12-15"
+    capacity = "1"
+  },
+  {
+    name     = "gpt-4o-mini-transcribe"
+    model    = "gpt-4o-mini-transcribe"
+    version  = "2025-12-15"
+    capacity = "1"
   },
   {
     name     = "claude-opus-4-5"
@@ -190,5 +223,12 @@ models = [
     version  = "20251001"
     format   = "Anthropic"
     capacity = "100"
+  },
+  {
+    name     = "FW-GLM-5.2"
+    model    = "FW-GLM-5.2"
+    format   = "Fireworks"
+    capacity = "1"
+    sku_name = "DataZoneStandard"
   }
 ]
