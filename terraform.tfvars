@@ -231,5 +231,21 @@ models = [
     format   = "Fireworks"
     capacity = "1"
     sku_name = "DataZoneStandard"
+  },
+  {
+    name     = "MAI-Image-2.6-Flash"
+    model    = "MAI-Image-2.6-Flash"
+    version  = "2026-07-31"
+    format   = "Microsoft"
+    capacity = "1"
+    region   = "East US"
+  },
+  {
+    name     = "MAI-Image-2.6"
+    model    = "MAI-Image-2.6"
+    version  = "2026-07-31"
+    format   = "Microsoft"
+    capacity = "1"
+    region   = "East US"
   }
 ]
