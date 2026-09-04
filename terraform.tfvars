@@ -54,8 +54,8 @@ models = [
     capacity = "100"
   },
   {
-    name     = "grok-4.3"
-    model    = "grok-4.3"
+    name     = "grok-4.6"
+    model    = "grok-4.6"
     format   = "xAI"
     capacity = "100"
   },
@@ -100,9 +100,9 @@ models = [
     capacity = "1"
   },
   {
-    name     = "DeepSeek-V4-Flash"
-    model    = "DeepSeek-V4-Flash"
-    version  = "2026-04-23"
+    name     = "DeepSeek-V4-Flash-0731"
+    model    = "DeepSeek-V4-Flash-0731"
+    version  = "2026-07-31"
     format   = "DeepSeek"
     capacity = "1"
   },
@@ -191,29 +191,43 @@ models = [
     capacity = "1"
   },
   {
-    name     = "claude-opus-4-5"
-    model    = "claude-opus-4-5"
-    version  = "20251101"
+    name     = "claude-opus-5"
+    model    = "claude-opus-5"
+    version  = "2"
     format   = "Anthropic"
-    capacity = "100"
+    capacity = "10"
   },
   {
     name     = "claude-sonnet-4-5"
     model    = "claude-sonnet-4-5"
     version  = "20250929"
     format   = "Anthropic"
-    capacity = "100"
+    capacity = "10"
   },
   {
     name     = "claude-haiku-4-5"
     model    = "claude-haiku-4-5"
     version  = "20251001"
     format   = "Anthropic"
-    capacity = "100"
+    capacity = "10"
   },
   {
-    name     = "FW-GLM-5.2"
-    model    = "FW-GLM-5.2"
+    name     = "FW-Kimi-K3"
+    model    = "FW-Kimi-K3"
+    format   = "Fireworks"
+    capacity = "1"
+    sku_name = "DataZoneStandard"
+  },
+  {
+    name     = "FW-GLM-5.3"
+    model    = "FW-GLM-5.3"
+    format   = "Fireworks"
+    capacity = "1"
+    sku_name = "DataZoneStandard"
+  },
+  {
+    name     = "FW-MiniMax-M3"
+    model    = "FW-MiniMax-M3"
     format   = "Fireworks"
     capacity = "1"
     sku_name = "DataZoneStandard"
