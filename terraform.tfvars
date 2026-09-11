@@ -12,6 +12,12 @@ models = [
     capacity = "100"
   },
   {
+    name     = "gpt-6-astra"
+    model    = "gpt-6-astra"
+    version  = "2026-09-03"
+    capacity = "100"
+  },
+  {
     name     = "gpt-5.6-sol"
     model    = "gpt-5.6-sol"
     version  = "2026-07-09"
@@ -140,6 +146,18 @@ models = [
     name     = "FLUX-1.1-pro"
     model    = "FLUX-1.1-pro"
     format   = "Black Forest Labs"
+    capacity = "1"
+  },
+  {
+    name     = "gpt-image-2.5-flare"
+    model    = "gpt-image-2.5-flare"
+    version  = "2026-09-08"
+    capacity = "1"
+  },
+  {
+    name     = "gpt-image-2.5-sunburst"
+    model    = "gpt-image-2.5-sunburst"
+    version  = "2026-09-08"
     capacity = "1"
   },
   {
