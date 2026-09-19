@@ -54,12 +54,6 @@ models = [
     capacity = "100"
   },
   {
-    name     = "o4-mini"
-    model    = "o4-mini"
-    version  = "2025-04-16"
-    capacity = "100"
-  },
-  {
     name     = "grok-4.6"
     model    = "grok-4.6"
     format   = "xAI"
