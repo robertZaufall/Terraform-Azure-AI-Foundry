@@ -149,6 +149,12 @@ models = [
     capacity = "1"
   },
   {
+    name     = "gpt-live-1"
+    model    = "gpt-live-1"
+    version  = "2026-09-10"
+    capacity = "1"
+  },
+  {
     name     = "gpt-image-2.5-sunburst"
     model    = "gpt-image-2.5-sunburst"
     version  = "2026-09-08"
