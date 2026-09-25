@@ -16,7 +16,7 @@ Strongest first (approximate). `—` = unavailable/not applicable; MP = megapixe
 
 #### OpenAI
 
-| Deployed model | Version | Retirement | Input | Output / other |
+| Deployed model | Version | Retirement | Input | Output |
 | --- | --- | --- | --- | --- |
 | `gpt-6-astra` | `2026-09-03` | 2028-01-11 | $10/$20 | $50/$75 |
 | `gpt-6-sol` | `2026-09-22` | 2028-03-11 | $2/$4 | $10/$15 |
@@ -25,7 +25,7 @@ Strongest first (approximate). `—` = unavailable/not applicable; MP = megapixe
 
 #### Anthropic
 
-| Deployed model | Version | Retirement | Input | Output / other |
+| Deployed model | Version | Retirement | Input | Output |
 | --- | --- | --- | --- | --- |
 | `claude-opus-5-5` | `2` | 2027-09-18 | $4 | $20 |
 | `claude-sonnet-5` | `2` | 2027-06-30 | $2 | $10 |
@@ -33,14 +33,14 @@ Strongest first (approximate). `—` = unavailable/not applicable; MP = megapixe
 
 #### Z.ai
 
-| Deployed model | Version | Retirement | Input | Output / other |
+| Deployed model | Version | Retirement | Input | Output |
 | --- | --- | --- | --- | --- |
 | `FW-GLM-5.3` | `1` | 2027-09-01 | $2.10 | $6.60 |
 | `FW-GLM-5.3-Flash` | `1` | 2027-09-13 | $0.188 | $0.625 |
 
 #### xAI
 
-| Deployed model | Version | Retirement | Input | Output / other |
+| Deployed model | Version | Retirement | Input | Output |
 | --- | --- | --- | --- | --- |
 | `grok-4.6` | `1` | 2027-08-24 | $2/$4 | $6/$12 |
 | `grok-4-20-reasoning` | `1` | 2027-04-06 | $1.25 | $2.50 |
@@ -48,7 +48,7 @@ Strongest first (approximate). `—` = unavailable/not applicable; MP = megapixe
 
 #### Moonshot AI
 
-| Deployed model | Version | Retirement | Input | Output / other |
+| Deployed model | Version | Retirement | Input | Output |
 | --- | --- | --- | --- | --- |
 | `FW-Kimi-K3` | `1` | 2027-07-27 | $3.30 | $16.50 |
 | `Kimi-K2.7-Code` | `2026-06-12` | 2026-10-03 | $0.95 | $4 |
@@ -56,7 +56,7 @@ Strongest first (approximate). `—` = unavailable/not applicable; MP = megapixe
 
 #### DeepSeek
 
-| Deployed model | Version | Retirement | Input | Output / other |
+| Deployed model | Version | Retirement | Input | Output |
 | --- | --- | --- | --- | --- |
 | `DeepSeek-V4.1-Flash` | `2026-09-10` | 2026-12-15 | — | — |
 | `FW-DeepSeek-V4.1-Flash` | `1` | 2027-09-15 | $0.375 | $1.50 |
@@ -64,20 +64,20 @@ Strongest first (approximate). `—` = unavailable/not applicable; MP = megapixe
 
 #### MiniMax
 
-| Deployed model | Version | Retirement | Input | Output / other |
+| Deployed model | Version | Retirement | Input | Output |
 | --- | --- | --- | --- | --- |
 | `FW-MiniMax-M3` | `1` | 2027-08-01 | $0.33 | $1.32 |
 
 #### Mistral AI
 
-| Deployed model | Version | Retirement | Input | Output / other |
+| Deployed model | Version | Retirement | Input | Output |
 | --- | --- | --- | --- | --- |
 | `mistral-medium-3-5` | `1` | 2027-10-01 | $1.50 | $7.50 |
 | `Mistral-Large-3` | `1` | 2099-12-31 | $0.50 | $1.50 |
 
 #### Meta
 
-| Deployed model | Version | Retirement | Input | Output / other |
+| Deployed model | Version | Retirement | Input | Output |
 | --- | --- | --- | --- | --- |
 | `Llama-3.3-70B-Instruct` | `5` | 2099-12-31 | $0.71 | $0.71 |
 
