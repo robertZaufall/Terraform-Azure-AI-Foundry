@@ -3,7 +3,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~> 4.55.0"
+      version = "~> 5.7.0"
     }
   }
 
@@ -27,6 +27,9 @@ provider "azurerm" {
   client_id       = local.azure_creds.clientId
   client_secret   = local.azure_creds.clientSecret
   tenant_id       = local.azure_creds.tenantId
+
+  # AzureRM 5.x no longer registers Azure resource providers by default.
+  resource_providers_to_register = ["Microsoft.CognitiveServices"]
 
   features {
     resource_group {

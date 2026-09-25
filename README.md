@@ -2,7 +2,7 @@
 
 The goal is to deploy all desired models. Not all models are available in every region. The deployment is now simplified to a Cognitive Account, Cognitive Account Project, and Cognitive Deployments. A dedicated resource group is created once in the default region, and accounts/projects are created per model region.  
 
-This project uses the newest (as of 2025-12-04) AzureRM provider `4.55.0`, which adds support for `azurerm_cognitive_account_project` resources. Terraform, Azure CLI, and access to the target subscription are required.
+This project uses AzureRM provider `5.7.0` (latest verified on 2026-09-25), constrained to the `5.7.x` series. Terraform, Azure CLI, and access to the target subscription are required. AzureRM 5.x no longer registers Azure resource providers by default, so `provider.tf` explicitly registers `Microsoft.CognitiveServices` for the accounts, projects, and deployments used here.
 
 ![Azure Diagram](azure_diagram.png)  
 
@@ -12,7 +12,9 @@ Result (here: region East US 2):
 
 ## Anthropic
 
-Anthropic models (Haiku, Sonnet, Opus) are not deployable end-to-end by default. Azure prompts for an "Industry" question when deploying one of these models, which currently must be answered manually in the Azure AI Foundry UI. After completing that manual deployment (and deleting the temporary model), Terraform deployments for Anthropic models succeed.
+Native Anthropic consent is still unavailable in AzureRM `5.7.0` (checked on 2026-09-25). `azurerm_cognitive_deployment` does not expose `modelProviderData` or its organization, country, and industry attestation fields; [the provider support issue remains open](https://github.com/hashicorp/terraform-provider-azurerm/issues/31140).
+
+For the current AzureRM-only configuration, complete the consent prompt in the Azure AI Foundry UI. After completing that manual deployment (and deleting the temporary model), Terraform deployments for Anthropic models succeed. Automated onboarding is available through AzAPI with `modelProviderData`; see [the proposed implementation in handover.md](handover.md) and [Microsoft's deployment guide](https://learn.microsoft.com/en-us/azure/developer/ai/how-to/deploy-claude-foundry).
 
 ![Anthropic](anthropic.png)  
 

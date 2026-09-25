@@ -18,39 +18,15 @@ models = [
     capacity = "100"
   },
   {
-    name     = "gpt-5.6-sol"
-    model    = "gpt-5.6-sol"
-    version  = "2026-07-09"
+    name     = "gpt-6-sol"
+    model    = "gpt-6-sol"
+    version  = "2026-09-22"
     capacity = "100"
   },
   {
-    name     = "gpt-5.6-terra"
-    model    = "gpt-5.6-terra"
-    version  = "2026-07-09"
-    capacity = "100"
-  },
-  {
-    name     = "gpt-5.6-luna"
-    model    = "gpt-5.6-luna"
-    version  = "2026-07-09"
-    capacity = "100"
-  },
-  {
-    name     = "gpt-5.4"
-    model    = "gpt-5.4"
-    version  = "2026-03-05"
-    capacity = "100"
-  },
-  {
-    name     = "gpt-5.4-mini"
-    model    = "gpt-5.4-mini"
-    version  = "2026-03-17"
-    capacity = "100"
-  },
-  {
-    name     = "gpt-5.4-nano"
-    model    = "gpt-5.4-nano"
-    version  = "2026-03-17"
+    name     = "gpt-6-luna"
+    model    = "gpt-6-luna"
+    version  = "2026-09-22"
     capacity = "100"
   },
   {
@@ -93,16 +69,16 @@ models = [
     capacity = "100"
   },
   {
-    name     = "DeepSeek-V4-Pro"
-    model    = "DeepSeek-V4-Pro"
-    version  = "2026-04-23"
+    name     = "DeepSeek-V4.1-Flash"
+    model    = "DeepSeek-V4.1-Flash"
+    version  = "2026-09-10"
     format   = "DeepSeek"
     capacity = "1"
   },
   {
-    name     = "DeepSeek-V4-Flash-0731"
-    model    = "DeepSeek-V4-Flash-0731"
-    version  = "2026-07-31"
+    name     = "DeepSeek-V4-Pro"
+    model    = "DeepSeek-V4-Pro"
+    version  = "2026-04-23"
     format   = "DeepSeek"
     capacity = "1"
   },
@@ -131,27 +107,9 @@ models = [
     capacity = "1"
   },
   {
-    name     = "FLUX.1-Kontext-pro"
-    model    = "FLUX.1-Kontext-pro"
-    format   = "Black Forest Labs"
-    capacity = "1"
-  },
-  {
-    name     = "FLUX-1.1-pro"
-    model    = "FLUX-1.1-pro"
-    format   = "Black Forest Labs"
-    capacity = "1"
-  },
-  {
     name     = "gpt-image-2.5-flare"
     model    = "gpt-image-2.5-flare"
     version  = "2026-09-08"
-    capacity = "1"
-  },
-  {
-    name     = "gpt-live-1"
-    model    = "gpt-live-1"
-    version  = "2026-09-10"
     capacity = "1"
   },
   {
@@ -179,6 +137,12 @@ models = [
     capacity = "1"
   },
   {
+    name     = "gpt-live-1"
+    model    = "gpt-live-1"
+    version  = "2026-09-10"
+    capacity = "1"
+  },
+  {
     name     = "gpt-realtime-2.1"
     model    = "gpt-realtime-2.1"
     version  = "2026-07-07"
@@ -203,22 +167,22 @@ models = [
     capacity = "1"
   },
   {
-    name     = "gpt-4o-mini-transcribe"
-    model    = "gpt-4o-mini-transcribe"
-    version  = "2025-12-15"
+    name     = "gpt-transcribe"
+    model    = "gpt-transcribe"
+    version  = "2026-07-28"
     capacity = "1"
   },
   {
-    name     = "claude-opus-5"
-    model    = "claude-opus-5"
+    name     = "claude-opus-5-5"
+    model    = "claude-opus-5-5"
     version  = "2"
     format   = "Anthropic"
     capacity = "10"
   },
   {
-    name     = "claude-sonnet-4-5"
-    model    = "claude-sonnet-4-5"
-    version  = "20250929"
+    name     = "claude-sonnet-5"
+    model    = "claude-sonnet-5"
+    version  = "2"
     format   = "Anthropic"
     capacity = "10"
   },
@@ -230,15 +194,29 @@ models = [
     capacity = "10"
   },
   {
-    name     = "FW-Kimi-K3"
-    model    = "FW-Kimi-K3"
+    name     = "FW-DeepSeek-V4.1-Flash"
+    model    = "FW-DeepSeek-V4.1-Flash"
+    format   = "Fireworks"
+    capacity = "1"
+    sku_name = "GlobalStandard"
+  },
+  {
+    name     = "FW-GLM-5.3-Flash"
+    model    = "FW-GLM-5.3-Flash"
+    format   = "Fireworks"
+    capacity = "1"
+    sku_name = "GlobalStandard"
+  },
+  {
+    name     = "FW-GLM-5.3"
+    model    = "FW-GLM-5.3"
     format   = "Fireworks"
     capacity = "1"
     sku_name = "DataZoneStandard"
   },
   {
-    name     = "FW-GLM-5.3"
-    model    = "FW-GLM-5.3"
+    name     = "FW-Kimi-K3"
+    model    = "FW-Kimi-K3"
     format   = "Fireworks"
     capacity = "1"
     sku_name = "DataZoneStandard"

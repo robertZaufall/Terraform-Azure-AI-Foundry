@@ -4,6 +4,8 @@
 
 This document records a proposed change for later evaluation. No Terraform implementation has been made as part of this handover.
 
+Rechecked on 2026-09-25 after upgrading the project to AzureRM `5.7.0`: the installed provider schema still has no `modelProviderData`/`model_provider_data` or organization, country, and industry consent inputs on `azurerm_cognitive_deployment`. [Issue #31140](https://github.com/hashicorp/terraform-provider-azurerm/issues/31140) remains open. The AzAPI proposal below remains unimplemented.
+
 The current configuration uses `azurerm_cognitive_deployment` for every model. That resource can set the model name, format, version, SKU, and capacity, but it does not currently expose the `modelProviderData` required for automated Claude Marketplace onboarding.
 
 The existing manual workaround in `README.md` is therefore valid: deploy one Claude model in the Foundry UI, accept the Marketplace terms, select the industry, wait for the deployment to succeed, delete the temporary deployment, and then run Terraform. This is a one-time subscription/onboarding bootstrap rather than a property of the model format.
