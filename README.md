@@ -16,102 +16,103 @@ Strongest first (approximate). `—` = unavailable/not applicable; MP = megapixe
 
 #### OpenAI
 
-| Deployed model | Focus | Version | Type | Retirement | Input | Cached input | Output / other | Source |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `gpt-6-astra` | reasoning/code | `2026-09-03` | Global | 2028-01-11 | Short: $10; long: $20 | Short: $1; long: $2 | Short: $50; long: $75 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20OpenAI%20GPT6%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
-| `gpt-6-sol` | multipurpose/code | `2026-09-22` | Global | 2028-03-11 | Short: $2; long: $4 | Short: $0.20; long: $0.40 | Short: $10; long: $15 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20OpenAI%20GPT6%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
-| `gpt-6-luna` | economy | `2026-09-22` | Global | 2028-03-11 | Short: $0.10; long: $0.20 | Short: $0.01; long: $0.02 | Short: $0.50; long: $0.75 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20OpenAI%20GPT6%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
-| `gpt-oss-120b` | older reasoning | `1` | Global | 2099-12-31 | $0.15 | — | $0.60 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20OpenAI%20OSS%20Models%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
+| Deployed model | Version | Retirement | Input | Output / other |
+| --- | --- | --- | --- | --- |
+| `gpt-6-astra` | `2026-09-03` | 2028-01-11 | $10/$20 | $50/$75 |
+| `gpt-6-sol` | `2026-09-22` | 2028-03-11 | $2/$4 | $10/$15 |
+| `gpt-6-luna` | `2026-09-22` | 2028-03-11 | $0.10/$0.20 | $0.50/$0.75 |
+| `gpt-oss-120b` | `1` | 2099-12-31 | $0.15 | $0.60 |
 
 #### Anthropic
 
-| Deployed model | Focus | Version | Type | Retirement | Input | Cached input | Output / other | Source |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `claude-opus-5-5` | reasoning/code | `2` | Global | 2027-09-18 | $4 | $0.20 | $20 | [Claude](https://platform.claude.com/docs/en/about-claude/pricing) |
-| `claude-sonnet-5` | chat/code | `2` | Global | 2027-06-30 | $2 | $0.20 | $10 | [Claude](https://platform.claude.com/docs/en/about-claude/pricing) |
-| `claude-haiku-4-5` | economy | `20251001` | Global | 2026-11-15 | $1 | $0.10 | $5 | [Claude](https://platform.claude.com/docs/en/about-claude/pricing) |
+| Deployed model | Version | Retirement | Input | Output / other |
+| --- | --- | --- | --- | --- |
+| `claude-opus-5-5` | `2` | 2027-09-18 | $4 | $20 |
+| `claude-sonnet-5` | `2` | 2027-06-30 | $2 | $10 |
+| `claude-haiku-4-5` | `20251001` | 2026-11-15 | $1 | $5 |
 
 #### Z.ai
 
-| Deployed model | Focus | Version | Type | Retirement | Input | Cached input | Output / other | Source |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `FW-GLM-5.3` | reasoning/code | `1` | Data Zone | 2027-09-01 | $2.10 | $0.39 | $6.60 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20Fireworks%20Models%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
-| `FW-GLM-5.3-Flash` | economy | `1` | Global | 2027-09-13 | $0.188 | $0.038 | $0.625 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20Fireworks%20Models%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
+| Deployed model | Version | Retirement | Input | Output / other |
+| --- | --- | --- | --- | --- |
+| `FW-GLM-5.3` | `1` | 2027-09-01 | $2.10 | $6.60 |
+| `FW-GLM-5.3-Flash` | `1` | 2027-09-13 | $0.188 | $0.625 |
 
 #### xAI
 
-| Deployed model | Focus | Version | Type | Retirement | Input | Cached input | Output / other | Source |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `grok-4.6` | multipurpose | `1` | Global | 2027-08-24 | Base: $2; long: $4 | Base: $0.50; long: $1 | Base: $6; long: $12 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20Grok%20Models%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
-| `grok-4-20-reasoning` | older reasoning | `1` | Global | 2027-04-06 | $1.25 | — | $2.50 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20Grok%20Models%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
-| `grok-4-20-non-reasoning` | older chat | `1` | Global | 2027-04-06 | $1.25 | — | $2.50 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20Grok%20Models%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
+| Deployed model | Version | Retirement | Input | Output / other |
+| --- | --- | --- | --- | --- |
+| `grok-4.6` | `1` | 2027-08-24 | $2/$4 | $6/$12 |
+| `grok-4-20-reasoning` | `1` | 2027-04-06 | $1.25 | $2.50 |
+| `grok-4-20-non-reasoning` | `1` | 2027-04-06 | $1.25 | $2.50 |
 
 #### Moonshot AI
 
-| Deployed model | Focus | Version | Type | Retirement | Input | Cached input | Output / other | Source |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `FW-Kimi-K3` | reasoning/code | `1` | Data Zone | 2027-07-27 | $3.30 | $0.33 | $16.50 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20Fireworks%20Models%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
-| `Kimi-K2.7-Code` | code specialist | `2026-06-12` | Global | 2026-10-03 | $0.95 | $0.19 | $4 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20Kimi%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
-| `Kimi-K2.6` | older reasoning | `2026-04-20` | Global | 2027-04-16 | $0.95 | $0.16 | $4 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20Kimi%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
+| Deployed model | Version | Retirement | Input | Output / other |
+| --- | --- | --- | --- | --- |
+| `FW-Kimi-K3` | `1` | 2027-07-27 | $3.30 | $16.50 |
+| `Kimi-K2.7-Code` | `2026-06-12` | 2026-10-03 | $0.95 | $4 |
+| `Kimi-K2.6` | `2026-04-20` | 2027-04-16 | $0.95 | $4 |
 
 #### DeepSeek
 
-| Deployed model | Focus | Version | Type | Retirement | Input | Cached input | Output / other | Source |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `DeepSeek-V4.1-Flash` | reasoning/code | `2026-09-10` | Global | 2026-12-15 | — | — | — | [Catalog](https://ai.azure.com/catalog/models/DeepSeek-V4.1-Flash?publisher=DeepSeek) |
-| `FW-DeepSeek-V4.1-Flash` | reasoning/code | `1` | Global | 2027-09-15 | $0.375 | $0.008 | $1.50 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20Fireworks%20Models%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
-| `DeepSeek-V4-Pro` | older reasoning | `2026-04-23` | Global | 2028-02-20 | $1.74 | $0.145 | $3.48 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20Deepseek%20Models%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
+| Deployed model | Version | Retirement | Input | Output / other |
+| --- | --- | --- | --- | --- |
+| `DeepSeek-V4.1-Flash` | `2026-09-10` | 2026-12-15 | — | — |
+| `FW-DeepSeek-V4.1-Flash` | `1` | 2027-09-15 | $0.375 | $1.50 |
+| `DeepSeek-V4-Pro` | `2026-04-23` | 2028-02-20 | $1.74 | $3.48 |
 
 #### MiniMax
 
-| Deployed model | Focus | Version | Type | Retirement | Input | Cached input | Output / other | Source |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `FW-MiniMax-M3` | economy/code | `1` | Data Zone | 2027-08-01 | $0.33 | $0.066 | $1.32 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20Fireworks%20Models%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
+| Deployed model | Version | Retirement | Input | Output / other |
+| --- | --- | --- | --- | --- |
+| `FW-MiniMax-M3` | `1` | 2027-08-01 | $0.33 | $1.32 |
 
 #### Mistral AI
 
-| Deployed model | Focus | Version | Type | Retirement | Input | Cached input | Output / other | Source |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `mistral-medium-3-5` | general chat/code | `1` | Global | 2027-10-01 | $1.50 | — | $7.50 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20Mistral%20Models%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
-| `Mistral-Large-3` | general chat | `1` | Global | 2099-12-31 | $0.50 | — | $1.50 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20Mistral%20Models%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
+| Deployed model | Version | Retirement | Input | Output / other |
+| --- | --- | --- | --- | --- |
+| `mistral-medium-3-5` | `1` | 2027-10-01 | $1.50 | $7.50 |
+| `Mistral-Large-3` | `1` | 2099-12-31 | $0.50 | $1.50 |
 
 #### Meta
 
-| Deployed model | Focus | Version | Type | Retirement | Input | Cached input | Output / other | Source |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `Llama-3.3-70B-Instruct` | older chat | `5` | Global | 2099-12-31 | $0.71 | — | $0.71 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20Llama%20Models%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
+| Deployed model | Version | Retirement | Input | Output / other |
+| --- | --- | --- | --- | --- |
+| `Llama-3.3-70B-Instruct` | `5` | 2099-12-31 | $0.71 | $0.71 |
 
 ### Image generation (7 models)
 
 #### OpenAI
 
-| Deployed model | Focus | Version | Type | Retirement | Input | Cached input | Output / other | Source |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `gpt-image-2.5-sunburst` | quality/editing | `2026-09-08` | Global | 2027-09-08 | Text: $5; image: $8 | Text: $1.25; image: $2 | Image: $30 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20OpenAI%20Media%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
-| `gpt-image-2.5-flare` | speed | `2026-09-08` | Global | 2027-09-08 | Text: $5; image: $8 | Text: $1.25; image: $2 | Image: $30 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20OpenAI%20Media%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
-| `gpt-image-2` | previous generation | `2026-04-21` | Global | 2027-10-21 | Text: $5; image: $8 | Text: $1.25; image: $2 | Image: $30 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20OpenAI%20Media%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
-| `gpt-image-1.5` | older generation | `2025-12-16` | Global | 2026-12-16 | Text: $5; image: $8 | Text: $1.25; image: $2 | Image: $32; text: $10 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20OpenAI%20Media%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
-| `gpt-image-1-mini` | economy | `2025-10-06` | Global | 2027-04-07 | Text: $2; image: $2.50 | Text: $0.20; image: $0.25 | Image: $8 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20OpenAI%20Media%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
+| Deployed model | Version | Retirement | Input (Text/Image) | Output |
+| --- | --- | --- | --- | --- |
+| `gpt-image-2.5-sunburst` | `2026-09-08` | 2027-09-08 | $5/$8 | $30 |
+| `gpt-image-2.5-flare` | `2026-09-08` | 2027-09-08 | $5/$8 | $30 |
+| `gpt-image-2` | `2026-04-21` | 2027-10-21 | $5/$8 | $30 |
+| `gpt-image-1.5` | `2025-12-16` | 2026-12-16 | $5/$8 | $32 |
+| `gpt-image-1-mini` | `2025-10-06` | 2027-04-07 | $2/$2.50 | $8 |
+
 
 #### Black Forest Labs
 
-| Deployed model | Focus | Version | Type | Retirement | Input | Cached input | Output / other | Source |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `FLUX.2-pro` | image specialist | `1` | Global | 2099-12-31 | Reference image: $0.015/MP | — | First output MP: $0.03; each additional MP: $0.015 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20BFL%20Flux%20Models%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
-| `FLUX.2-flex` | image specialist | `1` | Global | 2099-12-31 | Reference image: $0.05/MP | — | $0.05/MP | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20BFL%20Flux%20Models%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
+| Deployed model | Version | Retirement | Input / MP (Image) | Output / MP (First/Additional) |
+| --- | --- | --- | --- | --- |
+| `FLUX.2-pro` | `1` | 2099-12-31 | $0.015 | $0.03/$0.015 |
+| `FLUX.2-flex` | `1` | 2099-12-31 | $0.05 | $0.05/$0.05 |
 
 ### Audio (6 models)
 
 #### OpenAI
 
-| Deployed model | Focus | Version | Type | Retirement | Input | Cached input | Output / other | Source |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `gpt-live-1` | natural voice interaction | `2026-09-10` | Global | 2027-09-10 | — | — | $3/hour (Azure `Live 1 Gl Unit`) | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20OpenAI%20Media%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
-| `gpt-realtime-2.1` | voice reasoning/tools | `2026-07-07` | Global | 2027-07-31 | Text: $4; audio: $32; image: $5 | Text: $0.40; audio: $0.40; image: $0.50 | Text: $24; audio: $64 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20OpenAI%20Media%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
-| `gpt-audio-1.5` | audio chat | `2026-02-23` | Global | 2027-08-24 | Text: $2.50; audio: $32 | — | Text: $10; audio: $64 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20OpenAI%20Media%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
-| `gpt-realtime-2.1-mini` | economy voice | `2026-07-07` | Global | 2027-07-31 | Text: $0.60; audio: $10; image: $0.80 | Text: $0.06; audio: $0.30; image: $0.08 | Text: $2.40; audio: $20 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20OpenAI%20Media%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
-| `gpt-transcribe` | speech to text | `2026-07-28` | Global | 2028-02-01 | — | — | $0.27/hour (Azure `gpt-transcribe Gl Unit`) | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20OpenAI%20Media%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
-| `gpt-4o-mini-tts` | text to speech | `2025-12-15` | Global | 2027-06-15 | Text: $0.60 | — | Audio: $12 | [Azure](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20OpenAI%20Media%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27) |
+| Deployed model | Version | Retirement | Input (Text/Audio/Image) | Output (Text/Audio) |
+| --- | --- | --- | --- | --- |
+| `gpt-live-1` | `2026-09-10` | 2027-09-10 | — | $3/hour |
+| `gpt-realtime-2.1` | `2026-07-07` | 2027-07-31 | $4/$32/$5 | $24/$64 |
+| `gpt-audio-1.5` | `2026-02-23` | 2027-08-24 | $2.50/$32/— | $10/$64 |
+| `gpt-realtime-2.1-mini` | `2026-07-07` | 2027-07-31 | $0.60/$10/$0.80 | $2.40/$20 |
+| `gpt-transcribe` | `2026-07-28` | 2028-02-01 | — | $0.27/hour |
+| `gpt-4o-mini-tts` | `2025-12-15` | 2027-06-15 | $0.60/—/— | —/$12 |
 
 These figures are approximate and may be incomplete; accuracy is not guaranteed.
 
