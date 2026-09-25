@@ -85,7 +85,7 @@ Strongest first (approximate). `—` = unavailable/not applicable; MP = megapixe
 
 #### OpenAI
 
-| Deployed model | Version | Retirement | Input / 1M tokens (Text/Image) | Output / 1M tokens |
+| Deployed model | Version | Retirement | Input (Text/Image) | Output |
 | --- | --- | --- | --- | --- |
 | `gpt-image-2.5-sunburst` | `2026-09-08` | 2027-09-08 | $5/$8 | $30 |
 | `gpt-image-2.5-flare` | `2026-09-08` | 2027-09-08 | $5/$8 | $30 |
@@ -95,17 +95,18 @@ Strongest first (approximate). `—` = unavailable/not applicable; MP = megapixe
 
 #### Microsoft
 
-| Deployed model | Version | Retirement | Input / 1M tokens (Text/Image) | Output / 1M tokens |
+| Deployed model | Version | Retirement | Input (Text/Image) | Output |
 | --- | --- | --- | --- | --- |
 | `MAI-Image-2.6` | `2026-07-31` | 2027-01-09 | $5/$8 | $38 |
 | `MAI-Image-2.6-Flash` | `2026-07-31` | 2027-01-09 | $1.75/$2.50 | $19 |
 
 #### Black Forest Labs
 
-| Deployed model | Version | Retirement | Input / MP (Image) | Output / MP (First/Additional) |
+| Deployed model | Version | Retirement | Input | Output |
 | --- | --- | --- | --- | --- |
-| `FLUX.2-pro` | `1` | 2099-12-31 | $0.015 | $0.03/$0.015 |
-| `FLUX.2-flex` | `1` | 2099-12-31 | $0.05 | $0.05/$0.05 |
+| `FLUX.2-pro` | `1` | 2099-12-31 | $0.015/MP | $0.03/$0.015 per MP |
+| `FLUX.2-flex` | `1` | 2099-12-31 | $0.05/MP | $0.05/$0.05 per MP |
+
 
 ### Audio (6 models)
 
