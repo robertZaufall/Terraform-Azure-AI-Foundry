@@ -8,7 +8,7 @@ Terraform creates one resource group, an AI Services account and Foundry project
 
 ## Deployed models and pricing
 
-**2026-09-25 · 35 deployments · East US 2 · USD per 1M tokens unless stated otherwise.**
+**2026-09-26 · 37 deployments · East US 2 + East US · USD per 1M tokens unless stated otherwise.**
 
 Strongest first (approximate). `—` = unavailable/not applicable; MP = megapixel.
 
@@ -81,11 +81,11 @@ Strongest first (approximate). `—` = unavailable/not applicable; MP = megapixe
 | --- | --- | --- | --- | --- |
 | `Llama-3.3-70B-Instruct` | `5` | 2099-12-31 | $0.71 | $0.71 |
 
-### Image generation (7 models)
+### Image generation (9 models)
 
 #### OpenAI
 
-| Deployed model | Version | Retirement | Input (Text/Image) | Output |
+| Deployed model | Version | Retirement | Input / 1M tokens (Text/Image) | Output / 1M tokens |
 | --- | --- | --- | --- | --- |
 | `gpt-image-2.5-sunburst` | `2026-09-08` | 2027-09-08 | $5/$8 | $30 |
 | `gpt-image-2.5-flare` | `2026-09-08` | 2027-09-08 | $5/$8 | $30 |
@@ -93,6 +93,12 @@ Strongest first (approximate). `—` = unavailable/not applicable; MP = megapixe
 | `gpt-image-1.5` | `2025-12-16` | 2026-12-16 | $5/$8 | $32 |
 | `gpt-image-1-mini` | `2025-10-06` | 2027-04-07 | $2/$2.50 | $8 |
 
+#### Microsoft
+
+| Deployed model | Version | Retirement | Input / 1M tokens (Text/Image) | Output / 1M tokens |
+| --- | --- | --- | --- | --- |
+| `MAI-Image-2.6` | `2026-07-31` | 2027-01-09 | $5/$8 | $38 |
+| `MAI-Image-2.6-Flash` | `2026-07-31` | 2027-01-09 | $1.75/$2.50 | $19 |
 
 #### Black Forest Labs
 
