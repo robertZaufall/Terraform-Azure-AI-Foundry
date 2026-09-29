@@ -18,9 +18,9 @@ models = [
     capacity = "100"
   },
   {
-    name     = "gpt-6-sol"
-    model    = "gpt-6-sol"
-    version  = "2026-09-22"
+    name     = "gpt-6.1-sol"
+    model    = "gpt-6.1-sol"
+    version  = "2026-09-29"
     capacity = "100"
   },
   {
@@ -180,8 +180,8 @@ models = [
     capacity = "10"
   },
   {
-    name     = "claude-sonnet-5"
-    model    = "claude-sonnet-5"
+    name     = "claude-sonnet-5-5"
+    model    = "claude-sonnet-5-5"
     version  = "2"
     format   = "Anthropic"
     capacity = "10"
