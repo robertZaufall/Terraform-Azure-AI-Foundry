@@ -30,10 +30,10 @@ models = [
     capacity = "100"
   },
   {
-    name     = "grok-4.6"
-    model    = "grok-4.6"
+    name     = "grok-4.7"
+    model    = "grok-4.7"
     format   = "xAI"
-    capacity = "100"
+    capacity = "50"
   },
   {
     name     = "grok-4-20-non-reasoning"
