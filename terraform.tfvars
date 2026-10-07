@@ -187,9 +187,9 @@ models = [
     capacity = "10"
   },
   {
-    name     = "claude-haiku-4-5"
-    model    = "claude-haiku-4-5"
-    version  = "20251001"
+    name     = "claude-haiku-5-5"
+    model    = "claude-haiku-5-5"
+    version  = "2"
     format   = "Anthropic"
     capacity = "10"
   },
