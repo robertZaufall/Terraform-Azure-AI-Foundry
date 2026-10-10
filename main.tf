@@ -61,7 +61,7 @@ resource "azurerm_cognitive_account_project" "cap" {
 
 resource "azurerm_cognitive_deployment" "cgd" {
   for_each             = local.models_map
-  name                 = each.value.model
+  name                 = each.value.name
   cognitive_account_id = azurerm_cognitive_account.cga[each.value.region].id
   depends_on           = [azurerm_cognitive_account_project.cap]
 

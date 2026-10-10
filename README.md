@@ -8,9 +8,9 @@ Terraform creates one resource group, an AI Services account and Foundry project
 
 ## Deployed models and pricing
 
-**2026-09-26 · 37 deployments · East US 2 + East US · USD per 1M tokens unless stated otherwise.**
+**Last inventory/pricing check: 2026-09-26 · 37 deployments · East US 2 + East US · USD per 1M tokens unless stated otherwise.**
 
-Strongest first (approximate). `—` = unavailable/not applicable; MP = megapixel.
+Historical snapshot; current configuration changes are listed under **Choose models and regions**. Strongest first (approximate); paired chat prices = short/long context. `—` = unavailable/not applicable; MP = megapixel.
 
 ### Chat / multipurpose / code (22 models)
 
@@ -107,7 +107,6 @@ Strongest first (approximate). `—` = unavailable/not applicable; MP = megapixe
 | `FLUX.2-pro` | `1` | 2099-12-31 | $0.015/MP | $0.03/$0.015 per MP |
 | `FLUX.2-flex` | `1` | 2099-12-31 | $0.05/MP | $0.05/$0.05 per MP |
 
-
 ### Audio (6 models)
 
 #### OpenAI
@@ -125,7 +124,7 @@ These figures are approximate and may be incomplete; accuracy is not guaranteed.
 
 ## Deploy
 
-You need Terraform, Azure CLI, an Azure subscription with model access and quota, and an existing Azure Storage account and container for state. The configuration uses AzureRM `5.7.x` and registers `Microsoft.CognitiveServices` through the provider.
+You need Terraform 1.1.0 or later, Azure CLI, an Azure subscription with model access and quota, and an existing Azure Storage account and container for state. The configuration uses AzureRM `5.7.x` and registers `Microsoft.CognitiveServices` through the provider.
 
 ### 1. Set up credentials
 
@@ -160,6 +159,15 @@ Fill in the storage resource group, account, container, access key, and a state-
 
 ### 3. Choose models and regions
 
+The current `terraform.tfvars` contains 38 desired deployments: 35 in East US 2, two in East US, and one in West Central US. Compared with the inventory dated 2026-09-26, it replaces:
+
+- `gpt-6-sol` with `gpt-6.1-sol` (version `2026-09-29`).
+- `claude-sonnet-5` with `claude-sonnet-5-5` (version `2`).
+- `claude-haiku-4-5` with `claude-haiku-5-5` (version `2`).
+- `grok-4.6` with `grok-4.7` (version `1`, capacity `50`).
+
+It also adds `decision-1`, using `Microsoft-Decision-1` version `1` in West Central US with capacity `40`. These are configuration changes; the inventory above has not yet been reconciled with live deployments, retirement dates, or pricing for these models.
+
 Edit `terraform.tfvars`. Each entry defines a model deployment; for example:
 
 ```hcl
@@ -174,9 +182,9 @@ Edit `terraform.tfvars`. Each entry defines a model deployment; for example:
 }
 ```
 
-Use the publisher’s exact model name, format, and version. Choose `GlobalStandard` or `DataZoneStandard` where supported, and set capacity within the model’s regional quota. `name` is the unique Terraform entry key; `model` also becomes the Azure deployment name.
+Use the publisher’s exact model name, format, and version. Choose `GlobalStandard` or `DataZoneStandard` where supported, and set capacity within the model’s regional quota. `name` is both the unique Terraform entry key and the Azure deployment name; `model` is the publisher’s exact model identifier. For example, use `name = "decision-1"` with `model = "Microsoft-Decision-1"` to avoid Azure’s reserved-word restriction.
 
-`cga_name` controls the account-name prefix. Accounts outside `default_region` receive a region suffix. The resource group name is set in `main.tf`.
+`cga_name` controls the account-name prefix. Accounts outside `default_region` receive a region suffix. The resource group name is set in `main.tf`. An omitted model `region` defaults to `East US 2` in `variables.tf`, independently of `default_region`; set each model’s region explicitly when changing that default.
 
 ### 4. Plan and apply
 
@@ -215,7 +223,7 @@ This configuration uses a manual Foundry consent step for Anthropic models. On a
 
 ## Update deployments
 
-Change the model entries in `terraform.tfvars`, then run `terraform plan -out=tfplan` and `terraform apply tfplan` again. Review replacements and removals in the plan, especially when changing entry keys, deployment names, or regions.
+Change the model entries in `terraform.tfvars`, then run `terraform plan -out=tfplan` and `terraform apply tfplan` again. Review replacements and removals in the plan, especially when changing entry keys, deployment names, or regions. Accounts and projects are derived from the regions used by the model entries, so removing the last model in a region also removes that region’s account and project from the desired configuration.
 
 To inspect the models available to an account:
 

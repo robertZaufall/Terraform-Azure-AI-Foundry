@@ -12,6 +12,14 @@ models = [
     capacity = "100"
   },
   {
+    name     = "decision-1"
+    model    = "Microsoft-Decision-1"
+    format   = "Microsoft"
+    version  = "1"
+    capacity = "40"
+    region   = "West Central US"
+  },
+  {
     name     = "gpt-6-astra"
     model    = "gpt-6-astra"
     version  = "2026-09-03"
