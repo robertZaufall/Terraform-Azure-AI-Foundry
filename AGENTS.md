@@ -30,3 +30,10 @@ Retained from the 2026-09-25 inventory. Azure Retail Prices API links return JSO
 - `FLUX.2-pro`, `FLUX.2-flex`: [Azure price query](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName%20eq%20%27Foundry%20Models%27%20and%20productName%20eq%20%27Azure%20BFL%20Flux%20Models%27%20and%20armRegionName%20eq%20%27eastus2%27%20and%20priceType%20eq%20%27Consumption%27)
 
 - `MAI-Image-2.6`, `MAI-Image-2.6-Flash`: [Azure price query](https://prices.azure.com/api/retail/prices?currencyCode=USD&%24filter=serviceName+eq+%27Foundry+Models%27+and+productName+eq+%27MAI+Models%27+and+armRegionName+eq+%27eastus%27+and+priceType+eq+%27Consumption%27), [Microsoft model catalog](https://ai.azure.com/catalog/models/MAI-Image-2.6), [Microsoft launch](https://microsoft.ai/news/pushing-the-quality-cost-frontier-with-mai-image-2-6/). Verified on 2026-09-26 in East US: both deployed successfully as Global Standard, version `2026-07-31`; catalog inference/SKU retirement `2027-01-09`. Retail API product `MAI Models` uses 1M-token meters: standard text/image input $5/$8, image output $38; Flash text/image input $1.75/$2.50, image output $19.
+
+## Shared infrastructure reference
+
+Read [shared infrastructure rules](../infrastructure/AGENTS.md) and the
+[project infrastructure note](../infrastructure/Terraform-Azure-AI-Foundry.md) for cross-project
+ownership, access and preservation boundaries. Keep implementation and operational
+procedures in this repository.
