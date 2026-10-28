@@ -32,6 +32,13 @@ models = [
     capacity = "100"
   },
   {
+    name     = "gpt-6.1-terra"
+    model    = "gpt-6.1-terra"
+    version  = "2026-10-26"
+    capacity = "100"
+    region   = "East US"
+  },
+  {
     name     = "gpt-6-luna"
     model    = "gpt-6-luna"
     version  = "2026-09-22"
