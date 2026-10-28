@@ -8,18 +8,19 @@ Terraform creates one resource group, an AI Services account and Foundry project
 
 ## Deployed models and pricing
 
-**Last inventory/pricing check: 2026-09-26 · 37 deployments · East US 2 + East US · USD per 1M tokens unless stated otherwise.**
+**Configuration and deployment API check: 2026-10-29 · 40 models · East US 2, East US and West Central US · USD per 1M tokens unless stated otherwise. Pricing checked 2026-09-26; new model rates checked 2026-10-29 where available.**
 
-Historical snapshot; current configuration changes are listed under **Choose models and regions**. Strongest first (approximate); paired chat prices = short/long context. `—` = unavailable/not applicable; MP = megapixel.
+Foundry UI inventory verification is pending. Strongest first (approximate); paired chat prices = short/long context. `—` = unavailable/not applicable; MP = megapixel.
 
-### Chat / multipurpose / code (22 models)
+### Chat / multipurpose / code (25 models)
 
 #### OpenAI
 
 | Deployed model | Version | Retirement | Input | Output |
 | --- | --- | --- | --- | --- |
 | `gpt-6-astra` | `2026-09-03` | 2028-01-11 | $10/$20 | $50/$75 |
-| `gpt-6-sol` | `2026-09-22` | 2028-03-11 | $2/$4 | $10/$15 |
+| `gpt-6.1-sol` | `2026-09-29` | 2028-03-11 | $2/$4 | $10/$15 |
+| `gpt-6.1-terra` | `2026-10-26` | 2027-10-26 | — | — |
 | `gpt-6-luna` | `2026-09-22` | 2028-03-11 | $0.10/$0.20 | $0.50/$0.75 |
 | `gpt-oss-120b` | `1` | 2099-12-31 | $0.15 | $0.60 |
 
@@ -28,8 +29,9 @@ Historical snapshot; current configuration changes are listed under **Choose mod
 | Deployed model | Version | Retirement | Input | Output |
 | --- | --- | --- | --- | --- |
 | `claude-opus-5-5` | `2` | 2027-09-18 | $4 | $20 |
-| `claude-sonnet-5` | `2` | 2027-06-30 | $2 | $10 |
-| `claude-haiku-4-5` | `20251001` | 2026-11-15 | $1 | $5 |
+| `claude-opus-5-5-fast` | `2` | 2027-01-15 | $8 | $40 |
+| `claude-sonnet-5-5` | `2` | 2027-09-29 | $2 | $10 |
+| `claude-haiku-5-5` | `2` | 2027-09-29 | $0.10/$0.50 | $0.50/$2.50 |
 
 #### Z.ai
 
@@ -42,7 +44,7 @@ Historical snapshot; current configuration changes are listed under **Choose mod
 
 | Deployed model | Version | Retirement | Input | Output |
 | --- | --- | --- | --- | --- |
-| `grok-4.6` | `1` | 2027-08-24 | $2/$4 | $6/$12 |
+| `grok-4.7` | `1` | 2027-10-05 | $2/$4 | $6/$12 |
 | `grok-4-20-reasoning` | `1` | 2027-04-06 | $1.25 | $2.50 |
 | `grok-4-20-non-reasoning` | `1` | 2027-04-06 | $1.25 | $2.50 |
 
@@ -80,6 +82,12 @@ Historical snapshot; current configuration changes are listed under **Choose mod
 | Deployed model | Version | Retirement | Input | Output |
 | --- | --- | --- | --- | --- |
 | `Llama-3.3-70B-Instruct` | `5` | 2099-12-31 | $0.71 | $0.71 |
+
+#### Microsoft
+
+| Deployed model | Version | Retirement | Input | Output |
+| --- | --- | --- | --- | --- |
+| `decision-1` | `1` | 2027-02-04 | — | — |
 
 ### Image generation (9 models)
 
@@ -159,16 +167,7 @@ Fill in the storage resource group, account, container, access key, and a state-
 
 ### 3. Choose models and regions
 
-The current `terraform.tfvars` contains 40 desired deployments: 36 in East US 2, three in East US, and one in West Central US. Compared with the inventory dated 2026-09-26, it replaces:
-
-- `gpt-6-sol` with `gpt-6.1-sol` (version `2026-09-29`).
-- `claude-sonnet-5` with `claude-sonnet-5-5` (version `2`).
-- `claude-haiku-4-5` with `claude-haiku-5-5` (version `2`).
-- `grok-4.6` with `grok-4.7` (version `1`, capacity `50`).
-
-It also adds `decision-1`, using `Microsoft-Decision-1` version `1` in West Central US with capacity `40`, `claude-opus-5-5-fast` version `2` in East US 2 with capacity `10`, and `gpt-6.1-terra` version `2026-10-26` in East US with capacity `100`.
-
-On 2026-10-29, the Azure deployment API reported 40 successful deployments across those three regions, including these replacements and additions. The historical inventory above has not yet been refreshed: the Foundry UI, retirement dates, and current Azure prices still need verification.
+The current `terraform.tfvars` contains 40 desired deployments: 36 in East US 2, three in East US, and one in West Central US. The deployment API reported 40 successful deployments on 2026-10-29. `decision-1` uses the model `Microsoft-Decision-1`.
 
 Edit `terraform.tfvars`. Each entry defines a model deployment; for example:
 
