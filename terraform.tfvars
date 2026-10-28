@@ -181,6 +181,13 @@ models = [
     capacity = "1"
   },
   {
+    name     = "claude-opus-5-5-fast"
+    model    = "claude-opus-5-5-fast"
+    version  = "2"
+    format   = "Anthropic"
+    capacity = "10"
+  },
+  {
     name     = "claude-opus-5-5"
     model    = "claude-opus-5-5"
     version  = "2"

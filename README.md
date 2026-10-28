@@ -159,14 +159,14 @@ Fill in the storage resource group, account, container, access key, and a state-
 
 ### 3. Choose models and regions
 
-The current `terraform.tfvars` contains 38 desired deployments: 35 in East US 2, two in East US, and one in West Central US. Compared with the inventory dated 2026-09-26, it replaces:
+The current `terraform.tfvars` contains 39 desired deployments: 36 in East US 2, two in East US, and one in West Central US. Compared with the inventory dated 2026-09-26, it replaces:
 
 - `gpt-6-sol` with `gpt-6.1-sol` (version `2026-09-29`).
 - `claude-sonnet-5` with `claude-sonnet-5-5` (version `2`).
 - `claude-haiku-4-5` with `claude-haiku-5-5` (version `2`).
 - `grok-4.6` with `grok-4.7` (version `1`, capacity `50`).
 
-It also adds `decision-1`, using `Microsoft-Decision-1` version `1` in West Central US with capacity `40`. These are configuration changes; the inventory above has not yet been reconciled with live deployments, retirement dates, or pricing for these models.
+It also adds `decision-1`, using `Microsoft-Decision-1` version `1` in West Central US with capacity `40`, and `claude-opus-5-5-fast` version `2` in East US 2 with capacity `10`. These are configuration changes; the inventory above has not yet been reconciled with live deployments, retirement dates, or pricing for these models.
 
 Edit `terraform.tfvars`. Each entry defines a model deployment; for example:
 
