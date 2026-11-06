@@ -70,6 +70,13 @@ models = [
     capacity = "1"
   },
   {
+    name     = "Kimi-K3.1-Pro"
+    model    = "Kimi-K3.1-Pro"
+    version  = "2026-11-04"
+    format   = "MoonshotAI"
+    capacity = "100"
+  },
+  {
     name     = "Kimi-K2.7-Code"
     model    = "Kimi-K2.7-Code"
     version  = "2026-06-12"

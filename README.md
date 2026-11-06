@@ -8,11 +8,11 @@ Terraform creates one resource group, an AI Services account and Foundry project
 
 ## Deployed models and pricing
 
-**Configuration and deployment API check: 2026-10-29 · 40 models · East US 2, East US and West Central US · USD per 1M tokens unless stated otherwise. Pricing checked 2026-09-26; new model rates checked 2026-10-29 where available.**
+**Configuration: 2026-11-06 · 41 configured models · Last deployment API check: 2026-10-29 · East US 2, East US and West Central US · USD per 1M tokens unless stated otherwise. Pricing checked 2026-09-26; new model rates checked 2026-10-29 where available.**
 
-Foundry UI inventory verification is pending. Strongest first (approximate); paired chat prices = short/long context. `—` = unavailable/not applicable; MP = megapixel.
+Foundry UI inventory verification is pending. `Kimi-K3.1-Pro` is desired configuration only; deployment, pricing, retirement and strength ordering are unverified. Strongest first (approximate); paired chat prices = short/long context. `—` = unavailable/not applicable; MP = megapixel.
 
-### Chat / multipurpose / code (25 models)
+### Chat / multipurpose / code (26 models)
 
 #### OpenAI
 
@@ -55,6 +55,7 @@ Foundry UI inventory verification is pending. Strongest first (approximate); pai
 | `FW-Kimi-K3` | `1` | 2027-07-27 | $3.30 | $16.50 |
 | `Kimi-K2.7-Code` | `2026-06-12` | 2026-10-03 | $0.95 | $4 |
 | `Kimi-K2.6` | `2026-04-20` | 2027-04-16 | $0.95 | $4 |
+| `Kimi-K3.1-Pro` | `2026-11-04` | — | — | — |
 
 #### DeepSeek
 
