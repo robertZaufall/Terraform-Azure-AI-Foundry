@@ -8,11 +8,11 @@ Terraform creates one resource group, an AI Services account and Foundry project
 
 ## Deployed models and pricing
 
-**Configuration: 2026-11-06 · 41 configured models · Last deployment API check: 2026-10-29 · East US 2, East US and West Central US · USD per 1M tokens unless stated otherwise. Pricing checked 2026-09-26; new model rates checked 2026-10-29 where available.**
+**Configuration: 2026-11-10 · 37 configured models · Last deployment API check: 2026-10-29 · East US 2, East US and West Central US · USD per 1M tokens unless stated otherwise. Pricing checked 2026-09-26; new model rates checked 2026-10-29 where available.**
 
-Foundry UI inventory verification is pending. `Kimi-K3.1-Pro` is desired configuration only; deployment, pricing, retirement and strength ordering are unverified. Strongest first (approximate); paired chat prices = short/long context. `—` = unavailable/not applicable; MP = megapixel.
+Foundry UI inventory verification is pending; configuration removals are not verified live. `Kimi-K3.1-Pro` is desired configuration only; deployment, pricing, retirement and strength ordering are unverified. Strongest first (approximate); paired chat prices = short/long context. `—` = unavailable/not applicable; MP = megapixel.
 
-### Chat / multipurpose / code (26 models)
+### Chat / multipurpose / code (25 models)
 
 #### OpenAI
 
@@ -54,7 +54,6 @@ Foundry UI inventory verification is pending. `Kimi-K3.1-Pro` is desired configu
 | --- | --- | --- | --- | --- |
 | `FW-Kimi-K3` | `1` | 2027-07-27 | $3.30 | $16.50 |
 | `Kimi-K2.7-Code` | `2026-06-12` | 2026-10-03 | $0.95 | $4 |
-| `Kimi-K2.6` | `2026-04-20` | 2027-04-16 | $0.95 | $4 |
 | `Kimi-K3.1-Pro` | `2026-11-04` | — | — | — |
 
 #### DeepSeek
@@ -90,7 +89,7 @@ Foundry UI inventory verification is pending. `Kimi-K3.1-Pro` is desired configu
 | --- | --- | --- | --- | --- |
 | `decision-1` | `1` | 2027-02-04 | — | — |
 
-### Image generation (9 models)
+### Image generation (6 models)
 
 #### OpenAI
 
@@ -98,9 +97,6 @@ Foundry UI inventory verification is pending. `Kimi-K3.1-Pro` is desired configu
 | --- | --- | --- | --- | --- |
 | `gpt-image-2.5-sunburst` | `2026-09-08` | 2027-09-08 | $5/$8 | $30 |
 | `gpt-image-2.5-flare` | `2026-09-08` | 2027-09-08 | $5/$8 | $30 |
-| `gpt-image-2` | `2026-04-21` | 2027-10-21 | $5/$8 | $30 |
-| `gpt-image-1.5` | `2025-12-16` | 2026-12-16 | $5/$8 | $32 |
-| `gpt-image-1-mini` | `2025-10-06` | 2027-04-07 | $2/$2.50 | $8 |
 
 #### Microsoft
 
@@ -168,7 +164,7 @@ Fill in the storage resource group, account, container, access key, and a state-
 
 ### 3. Choose models and regions
 
-The current `terraform.tfvars` contains 40 desired deployments: 36 in East US 2, three in East US, and one in West Central US. The deployment API reported 40 successful deployments on 2026-10-29. `decision-1` uses the model `Microsoft-Decision-1`.
+The current `terraform.tfvars` contains 37 desired deployments: 33 in East US 2, three in East US, and one in West Central US. The deployment API reported 40 successful deployments on 2026-10-29. `decision-1` uses the model `Microsoft-Decision-1`.
 
 Edit `terraform.tfvars`. Each entry defines a model deployment; for example:
 

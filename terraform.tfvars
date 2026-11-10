@@ -84,13 +84,6 @@ models = [
     capacity = "100"
   },
   {
-    name     = "Kimi-K2.6"
-    model    = "Kimi-K2.6"
-    version  = "2026-04-20"
-    format   = "MoonshotAI"
-    capacity = "100"
-  },
-  {
     name     = "DeepSeek-V4.1-Flash"
     model    = "DeepSeek-V4.1-Flash"
     version  = "2026-09-10"
@@ -138,24 +131,6 @@ models = [
     name     = "gpt-image-2.5-sunburst"
     model    = "gpt-image-2.5-sunburst"
     version  = "2026-09-08"
-    capacity = "1"
-  },
-  {
-    name     = "gpt-image-2"
-    model    = "gpt-image-2"
-    version  = "2026-04-21"
-    capacity = "1"
-  },
-  {
-    name     = "gpt-image-1.5"
-    model    = "gpt-image-1.5"
-    version  = "2025-12-16"
-    capacity = "1"
-  },
-  {
-    name     = "gpt-image-1-mini"
-    model    = "gpt-image-1-mini"
-    version  = "2025-10-06"
     capacity = "1"
   },
   {
