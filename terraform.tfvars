@@ -12,24 +12,26 @@ models = [
     capacity = "100"
   },
   {
-    name     = "decision-1"
-    model    = "Microsoft-Decision-1"
+    name     = "decision-1.1"
+    model    = "Microsoft-Decision-1.1"
     format   = "Microsoft"
     version  = "1"
     capacity = "40"
     region   = "West Central US"
   },
   {
-    name     = "gpt-6-astra"
-    model    = "gpt-6-astra"
-    version  = "2026-09-03"
+    name     = "gpt-6.2-astra"
+    model    = "gpt-6.2-astra"
+    version  = "2026-11-17"
     capacity = "100"
+    region   = "East US"
   },
   {
-    name     = "gpt-6.1-sol"
-    model    = "gpt-6.1-sol"
-    version  = "2026-09-29"
+    name     = "gpt-6.2-sol"
+    model    = "gpt-6.2-sol"
+    version  = "2026-11-17"
     capacity = "100"
+    region   = "East US"
   },
   {
     name     = "gpt-6.1-terra"
@@ -233,17 +235,17 @@ models = [
     sku_name = "DataZoneStandard"
   },
   {
-    name     = "MAI-Image-2.6-Flash"
-    model    = "MAI-Image-2.6-Flash"
-    version  = "2026-07-31"
+    name     = "MAI-Image-2.7-Flash"
+    model    = "MAI-Image-2.7-Flash"
+    version  = "2026-11-02"
     format   = "Microsoft"
     capacity = "1"
     region   = "East US"
   },
   {
-    name     = "MAI-Image-2.6"
-    model    = "MAI-Image-2.6"
-    version  = "2026-07-31"
+    name     = "MAI-Image-2.7"
+    model    = "MAI-Image-2.7"
+    version  = "2026-11-02"
     format   = "Microsoft"
     capacity = "1"
     region   = "East US"
